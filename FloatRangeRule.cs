@@ -13,8 +13,6 @@ public class FloatRangeRule : ValidationRule
     {
         float val = 0f;
 
-
-
         try
         {
             if (((string)value).Length > 0)
@@ -28,7 +26,7 @@ public class FloatRangeRule : ValidationRule
         if ((val < Min) || (val > Max))
         {
             return new ValidationResult(false,
-                $"Please enter an value in the range: {Min}-{Max}.");
+                $"Please enter an value in the range: {Min} to {Max}.");
         }
         return ValidationResult.ValidResult;
     }

@@ -26,7 +26,7 @@ public class IntRangeRule : ValidationRule
         if ((val < Min) || (val > Max))
         {
             return new ValidationResult(false,
-                $"Please enter an value in the range: {Min}-{Max}.");
+                $"Please enter an value in the range: {Min} to {Max}.");
         }
         return ValidationResult.ValidResult;
     }
