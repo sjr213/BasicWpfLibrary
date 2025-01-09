@@ -15,7 +15,7 @@
         public static string GetFriendlyDescription(this Enum enumValue) =>
             TryGetDescriptionAttribute(enumValue)?.Description ?? enumValue.ToString();
 
-        public static DescriptionAttribute TryGetDescriptionAttribute(this Enum enumValue)
+        public static DescriptionAttribute? TryGetDescriptionAttribute(this Enum enumValue)
         {
             return enumValue.GetType().GetField(enumValue.ToString())
                 ?.GetCustomAttribute(typeof(DescriptionAttribute), false) as DescriptionAttribute;
